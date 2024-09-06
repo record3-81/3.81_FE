@@ -1,17 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Main from './main_page/main';
+import Home from './register_page/home';
 
 function App() {
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>3.81mm 프로젝트!</p>
-                <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    Learn React
-                </a>
-            </header>
-        </div>
+        <>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/main" element={<Main />} />
+                </Routes>
+            </Router>
+        </>
     );
 }
 
