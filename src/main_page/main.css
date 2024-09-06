@@ -1,10 +1,11 @@
-body {
+.main_container {
     display: flex;
+    flex-direction: column; /* 세로 방향으로 정렬 */
     justify-content: center; /* 수평 중앙 정렬 */
     align-items: center; /* 수직 중앙 정렬 */
     height: 100vh; /* 전체 화면 높이 */
     margin: 0; /* 기본 margin 제거 */
-    background-color: rgb(131, 91, 91); /* 배경색 (선택 사항) */
+    background-color: rgb(131, 91, 91);
 }
 
 .button {

@@ -23,12 +23,12 @@ function Main() {
     }, [login_info, position]);
 
     return (
-        <>
+        <div className="main_container">
             <Header>user.name</Header>
             <p>n개의 카세트 테이프가 보관되어 있습니다.</p>
             <Button className="b1">{content[0]}</Button>
             <Button className="b2">{content[1]}</Button>
-        </>
+        </div>
     );
 }
 
@@ -39,7 +39,7 @@ function Header(props) {
 function Button(props) {
     return (
         <>
-            <div className="container">
+            <div className="bt_container">
                 <div className={`button ${props.className}`}>
                     <p>{props.children}</p>
                 </div>
