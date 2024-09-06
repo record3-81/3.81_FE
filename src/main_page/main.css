@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 100vh; /* 전체 화면 높이 */
+    margin: 0; /* 기본 margin 제거 */
+    background-color: rgb(131, 91, 91); /* 배경색 (선택 사항) */
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 13vw;
+    height: 5vh;
+    border-radius: 15px;
+}
+
+.b1 {
+    background-color: white;
+    color: black;
+}
+
+.b2 {
+    background-color: grey;
+    color: white;
+}
