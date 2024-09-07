@@ -1,50 +1,62 @@
-import { useEffect, useState } from 'react';
-import './main.css';
+import React, { useEffect, useState } from 'react';
+import * as S from './styled/styled';
 
-const user = '유저정보 백에서 받아오기';
+const isLogined = '유저정보 백에서 받아오기';
+const user = {
+    name: '손예원',
+    tapeCount: 8,
+};
 const position = '현재 누구 수납장에 있는지';
 
 function Main() {
-    const [login_info, setLogin] = useState('logout');
+    const [isUserLogined, setIsUserLogined] = useState(false);
     const [content, setContent] = useState(['카세트 추가하기', '내 수납장 만들기']);
 
     useEffect(() => {
-        if (user == '로그인되어있음') {
-            setLogin('login');
+        if (isLogined == '로그인되어있음') {
+            setIsUserLogined(true);
         }
-    }, [login_info]);
+    }, [isUserLogined]);
 
     useEffect(() => {
-        if (login_info == 'login' && position == '현재 내 수납장에 있음') {
+        if (isUserLogined && position == '현재 내 수납장에 있음') {
             setContent(['카세트 추가하기', '내 수납장 공유하기']);
-        } else if (login_info == 'login' && position == '남의 수납장 구경중') {
+        } else if (isUserLogined && position == '남의 수납장 구경중') {
             setContent(['카세트 선물하기', '내 수납장 보러가기']);
         }
-    }, [login_info, position]);
+    }, [isUserLogined, position]);
 
     return (
-        <div className="main_container">
-            <Header>user.name</Header>
-            <p>n개의 카세트 테이프가 보관되어 있습니다.</p>
-            <Button className="b1">{content[0]}</Button>
-            <Button className="b2">{content[1]}</Button>
-        </div>
+        <S.MainContainer>
+            <S.HeadContainer>
+                <Header name={user.name} tapeCount={user.tapeCount} />
+            </S.HeadContainer>
+            <S.ButtonContainer>
+                <Button variant="primary" onClick={() => alert('흰색박스')}>
+                    {content[0]}
+                </Button>
+                <Button variant="secondary" onClick={() => alert('회색박스')}>
+                    {content[1]}
+                </Button>
+            </S.ButtonContainer>
+        </S.MainContainer>
     );
 }
 
-function Header(props) {
-    return <h1>{props.children}님의 수납장</h1>;
-}
-
-function Button(props) {
+function Header({ name, tapeCount }) {
     return (
         <>
-            <div className="bt_container">
-                <div className={`button ${props.className}`}>
-                    <p>{props.children}</p>
-                </div>
-            </div>
+            <S.Title>{name}님의 수납장</S.Title>
+            <S.Content>{tapeCount}개의 카세트 테이프가 보관되어 있습니다.</S.Content>
         </>
+    );
+}
+
+function Button({ variant, children, onClick }) {
+    return (
+        <S.StyledButton variant={variant} onClick={onClick}>
+            <p>{children}</p>
+        </S.StyledButton>
     );
 }
 
