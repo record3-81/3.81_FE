@@ -55,7 +55,7 @@ function Header({ name, tapeCount }) {
 function Button({ variant, children, onClick }) {
     return (
         <S.StyledButton variant={variant} onClick={onClick}>
-            <p>{children}</p>
+            <p>ㅤ{children}ㅤ</p>
         </S.StyledButton>
     );
 }
