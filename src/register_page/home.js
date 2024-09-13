@@ -1,14 +1,13 @@
+// src/register_page/home.js
 import React from 'react';
-function Home() {
+import { Container, TitleImage, KakaoLoginButton } from './styled/styled';
+const Home = () => {
     return (
-        <>
-            <Header title="3.81mm"></Header>
-        </>
+        <Container>
+            <TitleImage alt="3.81mm Archive Your Taste" />
+            <KakaoLoginButton alt="카카오 로그인 버튼" />
+        </Container>
     );
-}
-
-function Header(props) {
-    return <h1>{props.title}</h1>;
-}
+};
 
 export default Home;
