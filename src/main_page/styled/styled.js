@@ -22,22 +22,32 @@ export const MainContainer = styled.div`
 
 export const HeadContainer = styled.div`
     display: flex;
+    position: relative;
     flex-direction: column; /* S.title과 S.content가 수평이 아닌 수직 방향 일렬로 위치 */
+
+    width: 80vw;
     margin-top: 0;
     text-align: left;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.p`
     color: white;
+    position: absolute;
+    font-size: 1.8em;
+
     height: 5vh;
     margin: 0;
-    margin-top: 5%;
+    margin-top: 7%;
+
+    margin-left: -8%;
 `;
 
 export const Content = styled.p`
     color: white;
+    position: absolute;
     margin: 0%;
-    margin-top: 3%;
+    margin-top: 8.5vh;
+    margin-left: -8%;
 `;
 
 export const StyledButton = styled.div`
@@ -47,16 +57,31 @@ export const StyledButton = styled.div`
     /* 
     width: 13vw;
     height: 5vh; */
-    border-radius: 15px;
+    border-radius: 12px;
 
     background-color: ${(props) => (props.variant === 'primary' ? 'white' : 'grey')};
     color: ${(props) => (props.variant === 'primary' ? 'black' : 'white')};
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* 그림자 추가 */
 `;
 
 export const ButtonContainer = styled.div`
     margin: 0;
-    margin-top: 80vh;
+    margin-top: 83vh;
     /* HeadContainer와의 간격 조정 */
     display: flex; /* 버튼들을 가로로 정렬 */
     gap: 10px; /* 버튼 간격 조정 */
+`;
+
+export const ButtonContent = styled.p`
+    font-weight: bold; /* 굵은 글씨 */
+    margin: 0; /* 위아래 마진을 0으로 설정 */
+    padding: 11px; /* 필요에 따라 패딩 조정 */
+`;
+
+export const ImgGoBack = styled.div`
+    width: 30px; /* 원하는 크기로 조정 */
+    height: auto; /* 비율을 유지하기 위해 */
+    margin-left: 100%;
+    margin-top: 9%;
 `;
