@@ -12,6 +12,7 @@ export const MainContainer = styled.div`
     align-items: center; /* 수직 중앙 정렬 */
 
     height: 100vh; /* 전체 화면 높이*/
+    width: 100vm;
     margin: 0; /* 기본 margin 제거 */
     background-color: rgb(62, 46, 34);
 
@@ -29,12 +30,10 @@ export const HeadContainer = styled.div`
     display: flex;
     position: relative;
     flex-direction: column; /* S.title과 S.content가 수평이 아닌 수직 방향 일렬로 위치 */
-
-    /* width: 24rem;
-    width: 350px; 
-    height: 30vh; */
-    margin: 0;
-    align-items: center;
+    width: 100vw;
+    max-width: 28rem;
+    height: 13vh;
+    margin: 0 auto;
 `;
 
 export const Title = styled.p`
@@ -42,30 +41,28 @@ export const Title = styled.p`
     position: absolute;
     font-size: 1.8em;
 
-    width: 20rem;
+    /* width: 20rem; */
 
     margin: 0;
-    margin-top: 3.5vh;
-    transform: translateX(-5px); /* 10px 만큼 왼쪽으로 이동 */
+    top: 3.5vh;
+    left: 4vw;
 `;
 
 export const Content = styled.p`
     color: white;
     position: absolute;
-    width: 20rem;
+    top: 8.5vh;
+
     margin: 0%;
-    margin-top: 8.5vh;
-    margin-left: 2%;
-    transform: translateX(-5px); /* 10px 만큼 왼쪽으로 이동 */
+    left: 4vw;
 `;
 
 export const StyledButton = styled.div`
     display: flex;
-    justify-content: center;
     align-items: center;
 
-    /* width: 45vw;
-    height: 6vh; */
+    min-width: 45%;
+    height: 5.5vh;
 
     border-radius: 12px;
 
@@ -76,26 +73,30 @@ export const StyledButton = styled.div`
 `;
 
 export const ButtonContainer = styled.div`
-    margin: 0;
-    margin-top: 90vh;
+    margin: 0 auto;
+    margin-top: 77vh;
     /* HeadContainer와의 간격 조정 */
     display: flex; /* 버튼들을 가로로 정렬 */
     gap: 10px; /* 버튼 간격 조정 */
+    max-width: 28rem;
+    display: flex;
+    flex-direction: row;
 `;
 
 export const ButtonContent = styled.p`
     font-weight: bold; /* 굵은 글씨 */
     margin: 0; /* 위아래 마진을 0으로 설정 */
     padding: 11px; /* 필요에 따라 패딩 조정 */
+    font-size: 15px;
 `;
 
-export const ImgGoBack = styled.div`
+export const LogoutImg = styled.div`
     width: 30px; /* 원하는 크기로 조정 */
     height: auto; /* 비율을 유지하기 위해 */
     position: absolute;
-    margin-left: 90%;
-    margin-top: 3.5vh;
-    transform: translateX(160px); /* 10px 만큼 왼쪽으로 이동 */
+
+    top: 4.5vh;
+    right: 2vw;
 `;
 
 export const BtnImg = styled.img`
