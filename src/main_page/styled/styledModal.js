@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const MarginBox = styled.div`
+    width: 100%;
+    height: 35vh;
+    min-height: 36vh;
+`;
+
 export const Box = styled.div`
     width: 100vw;
     height: 100vh;
@@ -13,7 +19,7 @@ export const Box = styled.div`
     align-items: center;
     flex-direction: column;
 
-    margin-top: 40vh;
+    margin-top: 35vh;
 `;
 
 export const ContentBowl = styled.div`

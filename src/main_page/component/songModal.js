@@ -234,7 +234,7 @@ function SongModal() {
         },
         {
             id: 2,
-            title: '26끝!',
+            title: '26!',
             artist: '가수',
             album: '앨범 이름',
             genre: '장르',
@@ -242,7 +242,7 @@ function SongModal() {
         },
         {
             id: 2,
-            title: '더미!',
+            title: '27!',
             artist: '가수',
             album: '앨범 이름',
             genre: '장르',
@@ -250,7 +250,7 @@ function SongModal() {
         },
         {
             id: 2,
-            title: '더미',
+            title: '28',
             artist: '가수',
             album: '앨범 이름',
             genre: '장르',
@@ -258,7 +258,7 @@ function SongModal() {
         },
         {
             id: 2,
-            title: '더미',
+            title: '29',
             artist: '가수',
             album: '앨범 이름',
             genre: '장르',
@@ -266,15 +266,7 @@ function SongModal() {
         },
         {
             id: 2,
-            title: '더미',
-            artist: '가수',
-            album: '앨범 이름',
-            genre: '장르',
-            albumPic: './2.png',
-        },
-        {
-            id: 2,
-            title: '더미',
+            title: '30',
             artist: '가수',
             album: '앨범 이름',
             genre: '장르',
@@ -298,6 +290,7 @@ function SongModal() {
                         />
                     );
                 })}
+                <S.MarginBox />
             </S.Box>
         </>
     );
