@@ -12,7 +12,9 @@ export const MainContainer = styled.div`
     align-items: center; /* 수직 중앙 정렬 */
 
     height: 100vh; /* 전체 화면 높이*/
-    width: 100vm;
+
+    max-height: 100vh;
+    overflow-y: hidden;
     margin: 0; /* 기본 margin 제거 */
     background-color: rgb(62, 46, 34);
 

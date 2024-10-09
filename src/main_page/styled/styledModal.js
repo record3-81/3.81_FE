@@ -4,18 +4,22 @@ export const Box = styled.div`
     width: 100vw;
     height: 100vh;
     max-width: 28rem;
+    max-height: 100%;
+    overflow-y: auto;
 
-    position: absolute;
+    position: fixed;
+
     display: flex;
-
-    justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    margin-top: 40vh;
 `;
 
 export const ContentBowl = styled.div`
     width: 80%;
-    height: 8%;
+    min-height: 7.5%;
+    height: 7.5%;
 
     display: flex;
     background-color: rgb(163, 160, 157);
